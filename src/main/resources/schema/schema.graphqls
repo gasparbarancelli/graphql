@@ -1,0 +1,19 @@
+scalar LocalDate
+
+type Query {
+    promocoes(dataFilter: LocalDate): [Promocao]
+    produtos(descricaoFilter: String): [Produto]
+}
+
+type Promocao {
+    descricao: String
+    desconto: Float
+    dataInicial: LocalDate
+    dataFinal: LocalDate
+}
+
+type Produto {
+    id: Int
+    descricao: String
+    valor: Float
+}
